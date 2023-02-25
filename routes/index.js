@@ -19,8 +19,8 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    failureRedirect: "https://socially-backend.onrender.com/login/no",
-    successRedirect: "https://socially-noor-dev.vercel.app/",
+    failureRedirect: process.env.failureRedirect,
+    successRedirect: process.env.successRedirect,
     authInfo: true,
   })
   // async (req, res) => {
