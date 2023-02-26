@@ -44,7 +44,7 @@ const passportGoogleStrategy = new Strategy(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://socially-backend.onrender.com/auth/google/callback",
+    callbackURL: "/auth/google/callback",
   },
   verifyCb
 );

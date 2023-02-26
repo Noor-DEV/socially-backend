@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json({ extended: true /*limit: "30mb"*/ }));
 app.use(express.urlencoded({ extended: false /*limit: "30mb"*/ }));
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: process.env.MAIN_URL, credentials: true }));
 //HAS_AN_ERROR_CHECKOUT B4 UNCOMMENTING
 app.use(
   cookieSession({
