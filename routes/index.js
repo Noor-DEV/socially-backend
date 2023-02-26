@@ -46,6 +46,7 @@ router.get("/login/ok", (req, res) => {
   });
 });
 router.get("/isAuth", (req, res) => {
+  console.log(req.headers, ".................req.headers.............");
   if (req.user && req.isAuthenticated()) {
     return res.json({ msg: "AUTHENTICATED", isAuth: true, user: req.user });
   }
