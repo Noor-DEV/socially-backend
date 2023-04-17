@@ -13,10 +13,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 //CLOUDINARY.
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_NAME || "dns0lkiu6",
-  api_key: process.env.CLOUDINARY_API_KEY || "969359126214134",
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY ,
   api_secret:
-    process.env.CLOUDINARY_API_SECRET || "ze78qciGLjul-9LkDCVky0q37aE",
+    process.env.CLOUDINARY_API_SECRET ,
 });
 //
 //   .then((result) => {
